@@ -88,19 +88,72 @@
             return -1;
     });
 
+    const sortedEs6 = inventors.sort((a,b) => (a.passed - a.year) > (b.passed - b.year) ? 1 : 0);
+
     console.log("5. Sort inventors by years lived: ");
+    console.log("es5: ");
     console.log(sorted);
+    console.log("es6: ");
+    console.log(sortedEs6);
     console.log("------------------------------------------------");
 
     // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
-    // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
+    //  https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
     // const category = document.querySelector('.mw-category');
     // const links = Array.from(category.querySelectorAll('a'));
     // const de = links
     //             .map(link => link.textContent)
     //             .filter(streetName => streetName.includes('de'));
+
+    // console.log("6. Search for Boulevards in Paris that contain 'de' on the Wikipedia page: ");
+    // console.log(de);
+    // console.log("------------------------------------------------");
+
     // 7. sort Exercise
     // Sort the people alphabetically by last name
 
+    const sortedLastName = inventors.sort(function(a,b) {
+
+        if(a.last > b.last)
+            return 1;
+        else if (a.last < b.last)
+            return -1;
+        else
+            return 0;
+    });
+
+    console.log("7. Sort inventors by last name: ");
+    console.log(sortedLastName);
+    console.log("------------------------------------------------");
+
     // 8. Reduce Exercise
     // Sum up the instances of each of these
+    const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
+
+    //I'm being EXTRA here! 💁
+    const sortedData = data.sort(function (a,b) {
+
+        if (a > b)
+            return 1;
+        else if (a < b)
+            return -1;
+        else
+            return 0;
+    });
+
+    //reduce the modes of transportation
+    const reducedData = sortedData.reduce(function(allModes, mode) {
+
+        if(mode in allModes) 
+            allModes[mode]++;
+        else
+            allModes[mode] = 1;
+
+        return allModes;
+    }, {});
+
+    console.log("8. Reduce array to the sum of the instance of each unique value: ");
+    console.log(sortedData);
+    console.log("Reduced es5: ");
+    console.log(reducedData);
+    console.log("------------------------------------------------");
