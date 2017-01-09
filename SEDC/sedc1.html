@@ -1,0 +1,112 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+    <title>SEDC Interview questions</title>
+    <meta name="description" content="SEDC js/html/css exercises">
+    <meta name="author" content="Adam Paul">
+
+    <style type="text/css">
+    /* Write your CSS solution here */
+    /* 1. Header text should be gray. Number column should be bold.
+       Odd rows should be gray with white text, even rows should be white with black text */
+    thead {
+        color: #808080;
+    }
+
+    td:nth-child(1) {
+        font-weight: bold;
+    }
+
+    tbody>tr:nth-child(odd) {
+        background: #808080;
+        color: #fff;
+    }
+    </style>
+</head>
+
+<body>
+
+    <table>
+        <thead>
+            <tr><th>Rank</th><th>Name</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>1.</td><td>New York</td></tr>
+            <tr><td>2.</td><td>Los Angeles</td></tr>
+            <tr><td>3.</td><td>Chicago</td></tr>
+            <tr><td>4.</td><td>Houston</td></tr>
+        </tbody>
+    </table>
+
+  <script>
+
+  //2. calcAvgHeight should calculate average height from received data. If no data, return null
+  function calcAvgHeight(data) {
+
+        var height = 0;
+        var numPeople = 0;
+  
+        if(Object.keys(data).length === 0 && data.constructor === Object)
+            return null;
+        else {
+            Object.keys(data).forEach(function(key) {
+                height += data[key].height;
+                numPeople++;
+            });
+            
+        return height/numPeople;
+        }
+    }
+
+    // input object format
+    var avgHeight = calcAvgHeight({
+        Matt: { height: 174, weight: 69 },
+        Jason: { height: 190, weight: 103 }
+    });
+
+    var avgHeight2 = calcAvgHeight({});
+
+    // answers should be 182 and null
+    console.log("Average height for Matt and Jason: " + avgHeight);
+    console.log("Average height for nobody: " + avgHeight2);
+
+    //3. countItems should accept an array (may be nested arrays) and count the number of times it finds the second parameter in the first parameter.
+
+    function flatten(ary) {
+
+        var ret = [];
+        for(var i = 0; i < ary.length; i++) {
+            if(Array.isArray(ary[i])) {
+                ret = ret.concat(flatten(ary[i]));
+            } else {
+                ret.push(ary[i]);
+            }
+        }
+        return ret;
+    }
+
+    function countItems(arr, item) {
+    // Write the code that goes here
+    var flat = flatten(arr);
+    
+    var count = 0;
+        for(var i = 0; i < flat.length; ++i){
+        if(flat[i] === item)
+            count++;
+        }
+    
+    return count;
+    }
+
+    var arr = [
+        "apple",
+        ["banana", "strawberry", "apple"]
+    ];
+
+    console.log("Number of times I found apple: " + countItems(arr, "apple"));
+  </script>
+</body>
+</html>
