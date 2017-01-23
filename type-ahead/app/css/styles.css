@@ -4,12 +4,34 @@
   box-sizing: border-box;
 }
 body {
-  background: #ff0000;
+  background: #ff5722;
   height: 100vh;
   width: 100vw;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
 }
-body div {
-  background: #0000ff;
-  width: 200px;
-  height: 200px;
+body section {
+  text-align: center;
+  margin-top: 40px;
+}
+body section input {
+  background-color: #fbe9e7;
+  border: 5px solid #ffccbc;
+  line-height: 2em;
+  font-size: 2em;
+  border-radius: 5px;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+body section #cityOutput {
+  width: 400px;
+  height: 400px;
+  color: #000;
+  background-color: #fbe9e7;
+  overflow: hidden;
+  margin: 0 auto;
+}
+h1 {
+  color: #fff;
+  font-size: 3em;
 }

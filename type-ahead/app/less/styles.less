@@ -1,19 +1,57 @@
-@red: #ff0000;
-@blue: #0000ff;
+@white: #fff;
+
+// deep orange palette
+@do-50: #fbe9e7;
+@do-100: #ffccbc;
+@do-200: #ffab91;
+@do-300: #ff8a65;
+@do-400: #ff7043;
+@do-500: #ff5722;
+@do-600: #f4511e;
+@do-700: #e64a19;
+@do-800: #d84315;
+@do-900: #bf360c;
+
+
 
 *, *::before, *::after {
     box-sizing: border-box;
 }
 
 body {
-    background: @red;
+    background: @do-500;
     height: 100vh;
     width: 100vw;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
 
-    div {
-        background: @blue;
-        width: 200px;
-        height: 200px;
+    section {
+
+        text-align: center;
+        margin-top: 40px;
+
+        input {
+            background-color: @do-50;
+            border: 5px solid @do-100;
+            line-height: 2em;
+            font-size: 2em;
+            border-radius: 5px;
+            padding-left: 10px;
+            margin-bottom: 10px;
+        }
+
+        #cityOutput {
+            width: 400px;
+            height: 400px;
+            color: #000;
+            background-color: @do-50;
+            overflow: hidden;
+            margin: 0 auto;
+        }
     }
+}
 
+h1 {
+    color: @white;
+    font-size: 3em;
 }
