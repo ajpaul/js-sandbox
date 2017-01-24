@@ -2,6 +2,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 body {
   background: #ff5722;
@@ -24,14 +26,31 @@ body section input {
   margin-bottom: 10px;
 }
 body section #cityOutput {
-  width: 400px;
-  height: 400px;
   color: #000;
-  background-color: #fbe9e7;
   overflow: hidden;
+  list-style: none;
+}
+body section #cityOutput li {
+  background-color: #ffccbc;
+  height: 40px;
+  line-height: 40px;
+  width: 300px;
+  border: 2px solid #ffab91;
   margin: 0 auto;
+}
+body section #cityOutput li:nth-child(even) {
+  background-color: #fbe9e7;
+  transform: perspective(100px) rotateX(-3deg) translateY(3px);
+}
+body section #cityOutput li:nth-child(odd) {
+  transform: perspective(100px) rotateX(3deg) translateY(2px) scale(1.001);
 }
 h1 {
   color: #fff;
   font-size: 3em;
+  margin-bottom: 20px;
+}
+.highlight {
+  color: #fff;
+  background-color: #ff5722;
 }

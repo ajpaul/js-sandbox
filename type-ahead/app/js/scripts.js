@@ -3,7 +3,6 @@ const endpoint = 'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb
 const input = document.getElementById("cityInput");
 const output = document.getElementById("cityOutput");
 const cities = [];
-var inputVal;
 
 
 fetch(endpoint)
@@ -14,20 +13,22 @@ fetch(endpoint)
 input.addEventListener("input", updateView); //is this sufficient?
 
 function updateView() {
-    inputVal = input.value.toLowerCase();
-    output.innerText = cities.filter(containsCity);
+    let filtered = cities.filter(containsCity);
+    let formatted = filtered.map(place => {
+        let i = input.value;
+        const regex = new RegExp(i, 'gi');
+        const city = place.city.replace(regex, `<span class="highlight">${i}</span>`);
+        const state = place.state.replace(regex, `<span class="highlight">${i}</span>`);
+        return `<li>${city}, ${state}</li>`
+    }).join("");
 
-    // '\n' is newline
-    // filtered.forEach(function (element) {
-    //     output.innerText += `${element.city}, ${element.state}\n`;
-    // })
 
-    if(inputVal === "")
-        output.innerText = "";
 
+    output.innerHTML = formatted;
 } 
 
 function containsCity(value) {
-    return value.city.toLowerCase().includes(inputVal) 
-        || value.state.toLowerCase().includes(inputVal);
+
+    let i = input.value.toLowerCase();
+    return value.city.toLowerCase().includes(i) || value.state.toLowerCase().includes(i);
 }
