@@ -4,13 +4,35 @@
     <meta charset="utf-8">
     <meta name="author" content="Adam Paul">
 
-    <title>Template</title>
+    <title>Handlebars</title>
 
     <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
 </head>
 <body>
-    
-    <div></div>
+
+    <header>
+        <h2>Light Info Panel</h2>
+    </header>
+    <div id="data-section"></div>
+
+    <script id="lights-template" type="text/x-handlebars-template">
+        <h2>Max mounting height for room: {{max_mounting_height}}</h2>
+        <h4>Fixture type: {{fixtureType}}</h4>
+        <h4>Operating point: {{operatingPoint}}</h4>
+        <div class="lights">
+            {{#lights}}
+                <div class="lights-tile">
+                    <div>Light ID: {{id}}</div>
+                    <div>Tag value: {{tag}}</div>
+                    <div>External Length (m): {{externalLength}}</div>
+                    <div>External Width (m): {{externalWidth}}</div>
+                </div>
+            {{/lights}}
+        </div>
+    </script>
+    <script src="../node_modules/handlebars/dist/handlebars.min.js"></script>
+    <script src="data/lights.js"></script>
     <script src="js/scripts.js"></script>
 </body>
 </html>
