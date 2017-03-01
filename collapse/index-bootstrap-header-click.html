@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Example of Bootstrap 3 Accordion</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<style>
+
+    .svg {
+        float: right;
+        transition-timing-function: ease-in-out;
+        transition: .25s;
+        position: relative;
+        bottom: 10px;
+    }
+
+    .panel-heading > svg {
+        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+    }
+
+    .panel-heading.collapsed > svg {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+
+    }
+
+</style>
+
+</head>
+<body>
+<div class="bs-example">
+    <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+            <div class="panel-heading collapsed" data-toggle="collapse" data-parent="#accordion" data-target="#collapseOne">
+                <h4 class="panel-title">Collapse title</h4>
+                <svg class="svg" width="12" height="8" viewBox="0 0 12 8" xmlns="http://www.w3.org/2000/svg"><path d="M12 1.523L10.59 0 6 4.944 1.41 0 0 1.523 6 8z" fill="#000" fill-rule="evenodd"/></svg>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse">
+                <div class="panel-body" style="background-color: lightblue;">
+                    <p>Paleo skateboard single-origin coffee, meditation PBR&B copper mug retro sartorial squid succulents. Mixtape slow-carb normcore semiotics af thundercats roof party, hexagon seitan you probably haven't heard of them DIY yuccie post-ironic raw denim. Pitchfork neutra ramps organic, art party listicle actually vice woke. Pinterest hashtag craft beer, mlkshk succulents green juice poke 8-bit. Sustainable pork belly coloring book cardigan. Flannel 3 wolf moon cliche, deep v XOXO hell of green juice. Iceland yr artisan, lumbersexual portland tousled wolf fixie.</p>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading collapsed" data-toggle="collapse" data-parent="#accordion" data-target="#collapseTwo">
+                <h4 class="panel-title">Collapse title</h4>
+                <svg class="svg" width="12" height="8" viewBox="0 0 12 8" xmlns="http://www.w3.org/2000/svg"><path d="M12 1.523L10.59 0 6 4.944 1.41 0 0 1.523 6 8z" fill="#000" fill-rule="evenodd"/></svg>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse">
+                <div class="panel-body" style="background-color: lightgray;">
+                    <p>Taxidermy swag leggings hashtag cray. Actually photo booth pop-up pabst, brunch poutine shoreditch typewriter microdosing austin humblebrag hexagon viral hot chicken tote bag. Umami fanny pack art party fam, mustache seitan tumeric franzen green juice tumblr stumptown single-origin coffee. Distillery skateboard master cleanse, la croix bicycle rights typewriter wayfarers. Meh tumeric chillwave bushwick selvage four loko wolf, kitsch aesthetic cornhole crucifix banh mi. Pitchfork XOXO lumbersexual 8-bit, brunch bushwick fam humblebrag umami flexitarian +1 VHS fanny pack chillwave. Semiotics pop-up lomo, organic prism single-origin coffee cronut.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html> 
