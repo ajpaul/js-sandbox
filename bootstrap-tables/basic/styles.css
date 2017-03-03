@@ -1,0 +1,64 @@
+/* styles for basic bootstrap table */
+tbody {
+    border-bottom: 1.5px solid #dddddd;
+}
+
+thead > tr > th > input[type=checkbox] {
+    margin-right: 10px;
+}
+
+.row > * {
+    display: inline-block;
+}
+
+i {
+    margin-right: 10px;
+}
+
+.disabled-row {
+    opacity: .3;
+}
+
+.buttons-right {
+    float: right;
+}
+
+.btn.btn-primary.green-btn {
+    background: #01796a;
+    color: #fff;
+    border-radius: 0;
+    border: 2px solid #01796a;
+}
+
+.btn.outline {
+    background: none;
+    border: 2px solid #01796a;
+    color: #01796a;
+    border-radius: 0;
+}
+
+.btn.anchor-button {
+    color: #01796a;
+    text-decoration: underline;
+}
+
+.fa.fa-info-circle {
+    color: #1ba5d3;
+    margin: 0 0 0 4px;
+    position: relative;
+    bottom: 6px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.dropdown {
+    text-align: center;
+    margin-top: 17px;
+}
+
+.btn.btn-primary.dropdown-toggle {
+    background: none;
+    color: #000;
+    border-radius: 0;
+    border: 2px solid #000;
+}

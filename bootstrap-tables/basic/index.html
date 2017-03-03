@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BB Bootstrap Table</title>
+<link rel="stylesheet" href="styles.css"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+</head>
+<body>
+
+    
+        <header>
+            <div class="row">
+                <div class="col-xs-4">
+                    <div class="profile name">
+                        <span>Carl Finger</span>
+                        <span>finger_g@doverbank.com</span>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                            Dover Bank of Massachusetts
+                        <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Docket Number: 981264</a></li>
+                            <li><a href="#">Docket Number: 912991</a></li>
+                            <li><a href="#">Docket Number: 908322</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <h3>Configure Entitlements</h3>
+                </div>
+            </div>
+        </header>
+        
+        <hr>
+
+        <div class="container">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Functional Area</th>
+                        <th><input type="checkbox" value="">Initiate</th>
+                        <th><input type="checkbox" value="">Approve</th>
+                        <th><input type="checkbox" value="" checked>Originate</th>
+                        <th><input type="checkbox" value="">All</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">
+                            <i class="fa fa-area-chart" aria-hidden="true"></i>
+                            SafeKeeping<i class="fa fa-info-circle" aria-hidden="true"></i>
+                        </th>
+                        <td><input type="checkbox" value="" checked></td>
+                        <td><input type="checkbox" value=""></td>
+                        <td><input type="checkbox" value=""></td>
+                        <td><input type="checkbox" value=""></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <i class="fa fa-pie-chart" aria-hidden="true"></i>
+                            Deposits<i class="fa fa-info-circle" aria-hidden="true"></i>
+                        </th>
+                        <td><input type="checkbox" value=""></td>
+                        <td><input type="checkbox" value="" checked></td>
+                        <td><input type="checkbox" value=""></td>
+                        <td><input type="checkbox" value=""></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <i class="fa fa-users" aria-hidden="true"></i>
+                            Administration<i class="fa fa-info-circle" aria-hidden="true"></i>
+                        </th>
+                        <td><input type="checkbox" value=""></td>
+                        <td><input type="checkbox" value=""></td>
+                        <td><input type="checkbox" value="" checked></td>
+                        <td><input type="checkbox" value=""></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <i class="fa fa-refresh" aria-hidden="true"></i>
+                            Advances<i class="fa fa-info-circle" aria-hidden="true"></i>
+                        </th>
+                        <td><input type="checkbox" value=""></td>
+                        <td><input type="checkbox" value=""></td>
+                        <td><input type="checkbox" value=""></td>
+                        <td><input type="checkbox" value=""></td>
+                    </tr>
+                    <tr class="disabled-row">
+                        <th scope="row">
+                            <i class="fa fa-money" aria-hidden="true"></i>
+                            Wires<i class="fa fa-info-circle" aria-hidden="true"></i>
+                        </th> 
+                        <td><input type="checkbox" value="" disabled></td>
+                        <td><input type="checkbox" value="" disabled></td>
+                        <td><input type="checkbox" value="" disabled checked></td>
+                        <td><input type="checkbox" value="" disabled></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="button-row">
+                <button class="btn outline">Back</button>
+
+                <div class="buttons-right">
+                    <a href="" class="btn anchor-button">Undo Changes</a>
+                    <button class="btn btn-primary green-btn">Submit</button> <!-- submit? should the table be a form? -->
+                </div>
+            </div>
+        </div>
+</body>
+</html> 
