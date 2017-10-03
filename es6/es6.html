@@ -7,6 +7,8 @@
 
 <body>
 
+    <h2 class="jump">SPREADS</h2>
+
     <div class="wrap">
         <div class="box">
             <h2>Adam Paul</h2>
@@ -105,9 +107,19 @@
         .reduce((runningTotal, seconds) => runningTotal + seconds, 0);
 
     
- 
+    //spread stuff
+    const featured =  ['Pepperoni', 'Hawaiian', 'Meat lovers'];
+    const special = ['MP pizza', 'BBQ chicken', 'Antico style']
+    const pizzas = [...featured, ...special];
 
-    // map to an array of seconds
+    // spread exercise
+    const h2 = Array.from(document.querySelectorAll('.jump'), node => [...node.innerText])
+    h2.map(letter => `<span>${letter}</span>`).join('');;
+    
+    
+
+    //document.querySelector('.jump').innerHTML = h2;
+
 
 
     // reduce to get total
